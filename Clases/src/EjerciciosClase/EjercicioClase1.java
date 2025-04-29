@@ -1,9 +1,7 @@
 package EjerciciosClase;
-import java.sql.SQLOutput;
-import java.util.Locale;
 import  java.util.Scanner;
 
-public class EjercicioClase {
+public class EjercicioClase1 {
     public static void main(String[] args) {
 
 

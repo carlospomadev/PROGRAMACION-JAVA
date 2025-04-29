@@ -1,8 +1,7 @@
-package Clase6;
+package Clase5;
 import java.util.Scanner;
-import java.util.InputMismatchException;
 
-public class Clase6 {
+public class Clase5 {
     public static void main(String[] args) {
 //    Scanner scanner = new Scanner(System.in);
 //    try{
