@@ -1,9 +1,8 @@
 package Clase7;
 import java.util.Scanner;
-import java.util.Arrays;
 
 
-public class Arrays {
+public class Arrays1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 //Declaro el vector llamado número y detallo que tendrá 5 números
@@ -32,6 +31,7 @@ public class Arrays {
             System.out.println("Posición" + (indice+1) + ":" + numeros[indice]);
             indice++;
         }
+        System.out.println("\nCONTENIDO CON Array.stream:");
         java.util.Arrays.stream(numeros).forEachOrdered( num -> System.out.println("Elemento: " + num));
     }
 }
