@@ -17,16 +17,19 @@ public class Main {
             System.out.println("3.Realizar Venta");
             System.out.println("4.Mostrar Ventas");
             System.out.println("5.Salir");
-            opcion = sc.nextInt(); sc.nextLine();
-        } while (opcion <1 || opcion >5);
-        switch (opcion){
-            case 1 -> gestionarClientes(sc);
-            case 2 -> gestionpajaros(sc);
-            case 3 -> realizarVentas(sc);
-            case 4 -> mostrarventas(sc);
-            case 5 -> System.out.println("Saliendo...");        }
+            opcion = sc.nextInt();
+            sc.nextLine();
+
+            switch (opcion) {
+                case 1 -> gestionarClientes(sc);
+                case 2 -> gestionarPajaros(sc);
+                case 3 -> realizarVentas(sc);
+                case 4 -> mostrarVentas();
+                case 5 -> System.out.println("Saliendo...");
+            }
+        }while (opcion !=5);
     }
-   static void gestionarClientes(Scanner sc){
+   static void gestionarClientes(Scanner sc) {
        System.out.println("\n***Gestión de Clientes***");
        System.out.println("1.Alta");
        System.out.println("2.Baja");
@@ -45,69 +48,80 @@ public class Main {
                String telefono = sc.nextLine();
                System.out.println("Email:");
                String email = sc.nextLine();
-               clientes.add(new Cliente(nombre,dni,telefono,email));
+               clientes.add(new Cliente(nombre, dni, telefono, email));
            }
-           case 2 ->{
+           case 2 -> {
                listarClientes();
-               System.out.println("Posición a modificar: ");
+               System.out.println("Posición a eliminar: ");
                int pos = sc.nextInt();
                if (pos>=0 && pos<clientes.size()) clientes.remove(pos);
            }
-           case 3 ->{
+           case 3 -> {
                listarClientes();
                System.out.println("Posición a modificar: ");
                int pos = sc.nextInt(); sc.nextLine();
-               if (pos > 0 && pos < clientes.size()){
-                   Cliente cambioNombre = clientes.get(pos);
+               int indice = pos - 1;
+               if (indice >= 0 && indice < clientes.size()){
+                   Cliente cambioNombre = clientes.get(indice);
                    System.out.println("Nuevo nombre: ");
                    cambioNombre.setNombre(sc.nextLine());
                }
            }
-           case 4 -> ListarClientes();
+           case 4 -> listarClientes();
 
        }
 
     }
-    static void gestionpajaros(Scanner sc){
-        if (opc == 1) {
-            System.out.println("Especie: ");
-            String especie = sc.nextLine();
-            System.out.println("Color: ");
-            String color = sc.nextLine();
-            System.out.println("Precio: ");
-            double precio = sc.nextDouble();
-            pajaros.add(new Pajaro(especie,color,precio));
-        }else if ( opc == 2){
-            listarPajaros
+    static void gestionarPajaros(Scanner sc) {
+        System.out.println("\n***Gestión de Pájaros***");
+        System.out.println("1.Alta");
+        System.out.println("2.Listado");
+        int opc = sc.nextInt();
+        sc.nextLine();
+
+        switch (opc) {
+            case 1 -> {
+                System.out.println("Especie: ");
+                String especie = sc.nextLine();
+                System.out.println("Color: ");
+                String color = sc.nextLine();
+                System.out.println("Precio: ");
+                double precio = sc.nextDouble();
+                pajaros.add(new Pajaro(especie, color, precio));
+            }
+            case 2 -> listarPajaros();
         }
     }
+
     static void realizarVentas(Scanner sc){
-        if(clientes.isEmpty()) || pajaros.isEmpty(){
-            System.out.println("Erro. Primero registra clientes y pajaros.");
+        if(clientes.isEmpty() || pajaros.isEmpty()) {
+            System.out.println("Error. Primero registra clientes y pájaros.");
         return;
         }
         System.out.println("Seleccionar cliente: ");
         listarClientes();
         int posCliente = sc.nextInt(); sc.nextLine();
-        if(posCliente < 0 || posCliente >= clientes.size()) return;
-        Cliente clienteseleccionado = clientes.get(posCliente);
+        int indiceCliente = posCliente - 1;
+        if(indiceCliente < 0 || indiceCliente >= clientes.size()) return;
+        Cliente clienteseleccionado = clientes.get(indiceCliente);
         Venta venta = new Venta(clienteseleccionado);
 
         boolean seguir = true;
         while (seguir){
-            System.out.println("Selecciona pajaro para añadir");
+            System.out.println("Selecciona pajaro para añadir: ");
             listarPajaros();
             int posPajaro = sc.nextInt(); sc.nextLine();
-            if (posPajaro >= 0 && posPajaro<pajaros.size()){
-                venta.añadirPajaro(pajaros.get(posPajaro));
+            int indicepajaro = posPajaro - 1;
+            if (indicepajaro >= 0 && indicepajaro<pajaros.size()){
+                venta.añadirPajaro(pajaros.get(indicepajaro));
             }
             System.out.println("¿Añadir otro? (s/n): ");
-            seguir = sc.nextLine().equalsIgnoreCase("s"):
+            seguir = sc.nextLine().equalsIgnoreCase("s");
         }
         ventas.add(venta);
         System.out.println("Venta registrada");
     }
-    static void mostrarventas(){
+    static void mostrarVentas(){
         System.out.println("\n***Ventas registradas***");
         for (Venta v : ventas){
             v.mostrarInfo();
@@ -115,12 +129,12 @@ public class Main {
     }
     static void listarClientes(){
         for (int i = 0; i < clientes.size(); i++){
-            System.out.println(i+"." + clientes.get(i).getNombre());
+            System.out.println((i+1) + "." + clientes.get(i).getNombre());
         }
     }
     static void listarPajaros(){
         for (int i = 0; i<pajaros.size();i++){
-            System.out.println(i+"." + pajaros.get(i).getEspecie() + " - " + pajaros.get(i));
+            System.out.println((i+1) + "." + pajaros.get(i).getEspecie() + " - " + pajaros.get(i));
         }
     }
 
