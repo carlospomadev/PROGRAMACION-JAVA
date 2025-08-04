@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0ef3ddac-1855-43db-9378-ae8330b23a07" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Clase1/Clase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clase1/Clase1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clase2/Clase2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clase2/Clase2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clase3/Clase3.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clase3/Clase3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clase4/Clase4.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clase4/Clase4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Clase5/Clase6.java" beforeDir="false" afterPath="$PROJECT_DIR$/Clase5/Clase6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjerciciosClase/EjercicioClase1.java" beforeDir="false" afterPath="$PROJECT_DIR$/EjerciciosClase/EjercicioClase1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjerciciosClase/EjercicioClase2.java" beforeDir="false" afterPath="$PROJECT_DIR$/EjerciciosClase/EjercicioClase2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjerciciosClase/EjercicioClase4.java" beforeDir="false" afterPath="$PROJECT_DIR$/EjerciciosClase/EjercicioClase4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjerciciosClase/EjercicioClase5.java" beforeDir="false" afterPath="$PROJECT_DIR$/EjerciciosClase/EjercicioClase5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EjerciciosClase/EjerciciosClase3.java" beforeDir="false" afterPath="$PROJECT_DIR$/EjerciciosClase/EjerciciosClase3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/PROGRAMACION/Clase2/MainClase2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/PROGRAMACION/Clase3/MainClase3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/PROGRAMACION/Clase5/MainClase5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../out/production/PROGRAMACION/EjerciciosClase5/ejerciciosClase5.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "carlospomadev"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/carlospomadev/PROGRAMACION-JAVA.git",
+    "accountId": "9d62adce-751b-4ae0-bdc1-285b03a451e0"
+  }
+}]]></component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2vN0l1b4NUVxPojqpJCg56RRke2" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Clase1.executor": "Run",
+    "Application.Clase2.executor": "Run",
+    "Application.Clase3.executor": "Run",
+    "Application.Clase4.executor": "Run",
+    "Application.Clase6.executor": "Run",
+    "Application.EjercicioClase.executor": "Run",
+    "Application.EjercicioClase2.executor": "Run",
+    "Application.EjercicioClase4.executor": "Run",
+    "Application.EjercicioClase5.executor": "Run",
+    "Application.EjerciciosClase3.executor": "Run",
+    "Application.MainClase2.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/danip/Documents/GIT_PROYECTOS/DAM-DAW/RETO_ABRIL"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="MainClase2" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Clase2.MainClase2" />
+      <module name="Clases" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Clase2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0ef3ddac-1855-43db-9378-ae8330b23a07" name="Changes" comment="" />
+      <created>1743970371583</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1743970371583</updated>
+    </task>
+    <servers />
+  </component>
+</project>
