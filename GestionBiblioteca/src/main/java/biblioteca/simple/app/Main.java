@@ -3,6 +3,7 @@ package biblioteca.simple.app;
 import biblioteca.simple.contratos.Prestable;
 import biblioteca.simple.modelo.*;
 import biblioteca.simple.servicios.Catalogo;
+import biblioteca.simple.servicios.PersistenciaUsuarios;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;
@@ -51,7 +52,9 @@ int op;
         System.out.println("3. Buscar por año");
         System.out.println("4. Prestar Producto");
         System.out.println("5. Devolver Producto");
-        System.out.println("6. Crear usuario"); // <-- NUEVA OPCIÓN
+        System.out.println("6. Crear usuario"); // <-- NUEVA OPCIÓN CREACIÓN DE USUARIO
+        System.out.println("7. Exportar usuarios"); // <-- NUEVA FUNCIÓN EXPORTA JSON"
+        System.out.println("8. Importar usuarios"); // <-- NUEVA FUNCIÓN IMPORTA JSON"
         System.out.println("0. Salir");
 
         while(!sc.hasNextInt()) sc.next();
@@ -65,6 +68,8 @@ int op;
             case 4 -> prestar();
             case 5 -> devolver();
             case 6 -> crearUsuarioManual(); // <-- NUEVO OPCION
+            case 7 -> exportarUsuarios(); // <-- NUEVA FUNCION
+            case 8 -> importarUsuarios(); // <-- NUEVA FUNCION
             case 0 -> System.out.println("Sayonara!");
             default -> System.out.println("Opción no válida");
         }
@@ -281,5 +286,22 @@ int op;
         System.out.println("Usuario creado: Código " + u.getId() + " - Nombre " + u.getNombre());
         return u;
     }
-
+    private static void exportarUsuarios(){
+      try {
+          PersistenciaUsuarios.exportar(usuarios);
+          System.out.println("Usuarios exportados correctamente");
+      } catch (Exception e){
+          System.out.println("Error al exportar usuarios" + e.getMessage());
+      }
+    }
+    private static void importarUsuarios(){
+        try{
+            List<Usuario> cargados = PersistenciaUsuarios.importar();
+            usuarios.clear();
+            usuarios.addAll(cargados);
+            System.out.println("Usuarios cargados con éxito");
+        }catch (Exception e){
+            System.out.println("Error al importar: " + e.getMessage());
+        }
+    }
 }
