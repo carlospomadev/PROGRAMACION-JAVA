@@ -253,6 +253,9 @@ int op;
 
         if (getUsuarioPorCodigo(id) != null) {
             System.out.println("Ya existe un usuario con el código " + id);
+            // Nueva línea para pausar y esperar que el usuario decida regresar
+            System.out.println("\nPresiona ENTER para regresar al menú...");
+            sc.nextLine(); // Espera a que el usuario presione ENTER
             return;
         }
 
@@ -290,8 +293,14 @@ int op;
       try {
           PersistenciaUsuarios.exportar(usuarios);
           System.out.println("Usuarios exportados correctamente");
+          // Nueva línea para pausar y esperar que el usuario decida regresar
+            System.out.println("\nPresiona ENTER para regresar al menú...");
+            sc.nextLine(); // Espera a que el usuario presione ENTER
       } catch (Exception e){
           System.out.println("Error al exportar usuarios" + e.getMessage());
+          // Nueva línea para pausar y esperar que el usuario decida regresar
+            System.out.println("\nPresiona ENTER para regresar al menú...");
+            sc.nextLine(); // Espera a que el usuario presione ENTER
       }
     }
     private static void importarUsuarios(){
@@ -300,8 +309,12 @@ int op;
             usuarios.clear();
             usuarios.addAll(cargados);
             System.out.println("Usuarios cargados con éxito");
+            System.out.println("\nPresiona ENTER para regresar al menú...");
+            sc.nextLine();
         }catch (Exception e){
             System.out.println("Error al importar: " + e.getMessage());
+            System.out.println("\nPresiona ENTER para regresar al menú...");
+            sc.nextLine();
         }
     }
 }

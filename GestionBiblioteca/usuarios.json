@@ -9,10 +9,14 @@
   },
   {
     "id": 3,
-    "nombre": "Pepe"
+    "nombre": "PEPE"
+  },
+  {
+    "id": 5,
+    "nombre": "Carlos"
   },
   {
     "id": 4,
-    "nombre": "JUAN"
+    "nombre": "Ana"
   }
 ]
